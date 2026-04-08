@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer base {
+    :root {
+        /* EDITORIAL THEME */
+        --background: #F5F2EE;
+        --foreground: #1A1A1A;
+        --accent: #8C8680;
+        --border: rgba(0, 0, 0, 0.2);
+
+        /* Typography */
+        --tracking-wide: 0.25em;
+        --tracking-medium: 0.14em;
+        --tracking-tight: 0.05em;
+    }
+
+    body {
+        @apply bg-[var(--background)] text-[var(--foreground)];
+        font-family: "Alegreya Sans SC", sans-serif;
+    }
+}
+
+@layer components {
+    .editorial-container {
+        @apply w-full max-w-[1400px] mx-auto px-6 md:px-10;
+    }
+
+    .editorial-meta {
+        font-family: "IBM Plex Mono", monospace;
+        letter-spacing: var(--tracking-wide);
+        font-size: 10px;
+        color: var(--accent);
+    }
+
+    .hairline {
+        background: var(--border);
+        width: 1px;
+    }
+}
+
+@layer base {
+    body {
+        @apply bg-background text-foreground font-sans;
+    }
+
+    .nav-container {
+        @apply relative w-full max-w-[1300px] mx-auto px-5 overflow-x-clip;
+    }
+
+    .view-container {
+        @apply box-border mx-auto;
+        @apply w-[1100px] max-2xl:w-[1300px] max-xl:w-[950px] max-lg:w-[700px] max-md:w-[440px] max-sm:w-full px-5;
+    }
+}
+
+.be-vietnam {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-style: normal;
+}
