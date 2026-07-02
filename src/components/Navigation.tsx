@@ -16,7 +16,6 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="relative">
       <nav className="absolute top-0 left-0 w-full px-6 md:px-10 py-8 flex justify-between items-center z-50">
         
         {/* LOGO */}
@@ -81,7 +80,6 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </nav>
-    </div>
   );
 };
 
