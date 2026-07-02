@@ -7,13 +7,13 @@ import Vision from "@/components/MissionVision";
 import Projects from "@/components/Projects";
 
 export default function Home() {
-    return (
-        <>
-            <Header />
-            <Projects />
-            <Vision />
-            <Collaborate />
-            <Contact />
-        </>
-    );
+	return (
+		<>
+			<Header />
+			<Projects />
+			<Vision />
+			<Collaborate />
+			<Contact />
+		</>
+	);
 }
