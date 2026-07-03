@@ -164,7 +164,7 @@ export default async function Image() {
 							letterSpacing: "0.05em",
 						}}
 					>
-						devravipandey.in
+						raviverse.dev
 					</span>
 					<span
 						style={{

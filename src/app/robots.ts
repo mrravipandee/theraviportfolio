@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
 			userAgent: "*",
 			allow: "/",
 		},
-		sitemap: "https://devravipandey.in/sitemap.xml",
+		sitemap: "https://raviverse.dev/sitemap.xml",
 	};
 }

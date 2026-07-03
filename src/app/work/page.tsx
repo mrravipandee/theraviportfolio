@@ -28,7 +28,7 @@ const Work = () => {
 				description: project.description,
 				genre: project.scope,
 				programmingLanguage: project.technologies,
-				url: project.sourceLink || "https://devravipandey.in/work",
+				url: project.sourceLink || "https://raviverse.dev/work",
 			},
 		})),
 	};

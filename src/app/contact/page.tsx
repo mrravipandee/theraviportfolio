@@ -15,7 +15,7 @@ const ContactPage = () => {
 		"@context": "https://schema.org",
 		"@type": "Person",
 		name: "Ravi Pandey",
-		url: "https://devravipandey.in",
+		url: "https://raviverse.dev",
 		contactPoint: {
 			"@type": "ContactPoint",
 			telephone: "+91-70585-48204",

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 		title: "Services | Ravi Pandey • Freelance Software Engineer",
 		description:
 			"Hire a freelance software engineer and full-stack developer based in Nashik, India. Specializing in custom Frontend, Backend, Android Apps, and Machine Learning solutions.",
-		url: "https://devravipandey.in/services",
+		url: "https://raviverse.dev/services",
 		siteName: "Ravi Pandey Portfolio",
 		locale: "en_US",
 		type: "website",
@@ -31,8 +31,8 @@ const ServicesPage = () => {
 		"@context": "https://schema.org",
 		"@type": "ProfessionalService",
 		name: "Ravi Pandey - Freelance SDE",
-		image: "https://devravipandey.in/founder-ravi-pandey.png",
-		url: "https://devravipandey.in/services",
+		image: "https://raviverse.dev/founder-ravi-pandey.png",
+		url: "https://raviverse.dev/services",
 		telephone: "+917058548204",
 		priceRange: "$$",
 		address: {

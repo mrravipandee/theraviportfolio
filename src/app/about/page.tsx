@@ -17,8 +17,8 @@ const About = () => {
 		"@type": "Person",
 		name: "Ravi Pandey",
 		jobTitle: "Software Engineer & Full-Stack Developer",
-		url: "https://devravipandey.in",
-		image: "https://devravipandey.in/founder-ravi-pandey.png",
+		url: "https://raviverse.dev",
+		image: "https://raviverse.dev/founder-ravi-pandey.png",
 		address: {
 			"@type": "PostalAddress",
 			addressLocality: "Nashik",

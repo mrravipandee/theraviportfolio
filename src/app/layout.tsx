@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 		"Ravi Pandey • Software Engineer | Full-Stack Developer | ML Enthusiast",
 	description:
 		"Ravi Pandey is a passionate software engineer, full-stack web developer, and machine learning enthusiast. He builds scalable digital solutions for startups and modern businesses.",
-	metadataBase: new URL("https://devravipandey.in"),
+	metadataBase: new URL("https://raviverse.dev"),
 	alternates: {
 		canonical: "/",
 	},
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 		title: "Ravi Pandey • Software Engineer | Web Developer | ML Enthusiast",
 		description:
 			"Explore the work of Ravi Pandey — a full-stack developer, backend engineer, and machine learning enthusiast helping startups with purpose-driven solutions.",
-		url: "https://devravipandey.in",
+		url: "https://raviverse.dev",
 		siteName: "Ravi Pandey Portfolio",
 		images: [
 			{

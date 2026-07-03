@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 		title: "Ravi Pandey | Full-Stack SDE - Share Profile",
 		description:
 			"Connect with Ravi Pandey — Software Engineer & Full-Stack Developer. View phone contact, digital channels, and featured video showcase.",
-		url: "https://devravipandey.in/contact/share-profile",
+		url: "https://raviverse.dev/contact/share-profile",
 		siteName: "Ravi Pandey Portfolio",
 		locale: "en_US",
 		type: "profile",
@@ -36,7 +36,7 @@ const ShareProfilePage = () => {
 			jobTitle: "Software Engineer & Full-Stack SDE",
 			description:
 				"Software Engineer & Full-Stack SDE helping startups turn complex concepts into beautiful, scalable digital realities.",
-			image: "https://devravipandey.in/founder-ravi-pandey.png",
+			image: "https://raviverse.dev/founder-ravi-pandey.png",
 			address: {
 				"@type": "PostalAddress",
 				addressLocality: "Nashik",

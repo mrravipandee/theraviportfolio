@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = "https://devravipandey.in";
+	const baseUrl = "https://raviverse.dev";
 	const routes = [
 		"",
 		"/about",
