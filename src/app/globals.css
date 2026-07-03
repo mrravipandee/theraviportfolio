@@ -10,6 +10,11 @@
 		--accent: #8c8680;
 		--border: rgba(0, 0, 0, 0.2);
 
+		/* Standard Colors Mapped in tailwind.config.ts */
+		--white: #ffffff;
+		--transparent: transparent;
+		--green: #22c55e;
+
 		/* Typography */
 		--tracking-wide: 0.25em;
 		--tracking-medium: 0.14em;
