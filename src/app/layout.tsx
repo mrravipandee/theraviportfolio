@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Be_Vietnam_Pro, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
@@ -9,6 +9,11 @@ import Navigation from "@/components/Navigation";
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
 	variable: "--font-space-grotesk",
+});
+const beVietnamPro = Be_Vietnam_Pro({
+	subsets: ["latin"],
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	variable: "--font-be-vietnam-pro",
 });
 
 const generalSans = localFont({
@@ -23,6 +28,9 @@ export const metadata: Metadata = {
 	description:
 		"Ravi Pandey is a passionate software engineer, full-stack web developer, and machine learning enthusiast. He builds scalable digital solutions for startups and modern businesses.",
 	metadataBase: new URL("https://devravipandey.in"),
+	alternates: {
+		canonical: "/",
+	},
 	keywords: [
 		"Ravi Pandey",
 		"Ravi Pandey Dev",
@@ -47,13 +55,36 @@ export const metadata: Metadata = {
 		title: "Ravi Pandey • Software Engineer | Web Developer | ML Enthusiast",
 		description:
 			"Explore the work of Ravi Pandey — a full-stack developer, backend engineer, and machine learning enthusiast helping startups with purpose-driven solutions.",
-		url: "https://raviverse.dev",
+		url: "https://devravipandey.in",
 		siteName: "Ravi Pandey Portfolio",
-		images: {
-			url: "/opengraph-image.png",
-			width: 1920,
-			height: 960,
-			alt: "Ravi Pandey: Software Engineer, Web Developer, and Machine Learning Enthusiast",
+		images: [
+			{
+				url: "/opengraph-image.png",
+				width: 1200,
+				height: 630,
+				alt: "Ravi Pandey: Software Engineer, Web Developer, and Machine Learning Enthusiast",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Ravi Pandey • Software Engineer | Web Developer | ML Enthusiast",
+		description:
+			"Explore the work of Ravi Pandey — a full-stack developer, backend engineer, and machine learning enthusiast helping startups.",
+		images: ["/opengraph-image.png"],
+		creator: "@mrravipandee",
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
 		},
 	},
 };
@@ -65,7 +96,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${generalSans.variable} ${spaceGrotesk.variable}`}>
+			<body
+				className={`${generalSans.variable} ${spaceGrotesk.variable} ${beVietnamPro.variable}`}
+			>
 				<Navigation />
 				{children}
 				<Analytics />

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @layer base {
 	:root {
@@ -42,6 +41,11 @@
 }
 
 @layer base {
+	html,
+	body {
+		@apply overflow-x-hidden;
+	}
+
 	body {
 		@apply bg-background text-foreground font-sans;
 	}
@@ -51,12 +55,11 @@
 	}
 
 	.view-container {
-		@apply box-border mx-auto;
-		@apply w-[1100px] max-2xl:w-[1300px] max-xl:w-[950px] max-lg:w-[700px] max-md:w-[440px] max-sm:w-full px-5;
+		@apply box-border mx-auto w-full max-w-[1200px];
 	}
 }
 
 .be-vietnam {
-	font-family: "Be Vietnam Pro", sans-serif;
+	font-family: var(--font-be-vietnam-pro), sans-serif;
 	font-style: normal;
 }

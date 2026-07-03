@@ -16,7 +16,9 @@ const Navigation = () => {
 	];
 
 	return (
-		<nav className="absolute top-0 left-0 w-full px-6 md:px-10 py-8 flex justify-between items-center z-50">
+		<nav
+			className={`${isOpen ? "fixed" : "absolute"} top-0 left-0 w-full px-6 md:px-10 py-6 md:py-8 flex justify-between items-center z-50`}
+		>
 			{/* LOGO */}
 			<Link href="/" className="z-50 transition-opacity hover:opacity-70">
 				<Image
@@ -43,18 +45,19 @@ const Navigation = () => {
 
 			{/* MOBILE HAMBURGER BUTTON */}
 			<button
+				type="button"
 				onClick={() => setIsOpen(!isOpen)}
 				className="md:hidden z-50 flex flex-col gap-1.5 p-2"
 				aria-label="Toggle Menu"
 			>
 				<div
-					className={`w-6 h-[1px] bg-black transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-[7px]" : ""}`}
+					className={`w-6 h-0.5 bg-black transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-[8px]" : ""}`}
 				/>
 				<div
-					className={`w-6 h-[1px] bg-black transition-opacity duration-300 ${isOpen ? "opacity-0" : ""}`}
+					className={`w-6 h-0.5 bg-black transition-opacity duration-300 ${isOpen ? "opacity-0" : ""}`}
 				/>
 				<div
-					className={`w-6 h-[1px] bg-black transition-transform duration-300 ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`}
+					className={`w-6 h-0.5 bg-black transition-transform duration-300 ${isOpen ? "-rotate-45 -translate-y-[8px]" : ""}`}
 				/>
 			</button>
 
