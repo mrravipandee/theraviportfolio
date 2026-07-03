@@ -42,18 +42,25 @@ const Header = () => {
 						simple. I help founders turn messy ideas into polished products.
 					</p>
 
-					<div className="mt-10 flex justify-center gap-8 text-[11px] md:text-xs tracking-[0.2em] uppercase font-bold">
+					<div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-8 text-[11px] md:text-xs tracking-[0.2em] uppercase font-bold">
 						<Link href="/about" className="group flex items-center gap-2">
 							<span>Say Hello</span>
 							<span className="group-hover:translate-x-1 transition-transform">
 								→
 							</span>
 						</Link>
-						<a
-							href="#"
-							className="opacity-40 hover:opacity-100 transition-opacity"
+						<Link
+							href="/work"
+							className="opacity-60 hover:opacity-100 transition-opacity"
 						>
 							My Work
+						</Link>
+						<a
+							href="/ravipande-sde.pdf"
+							download="Ravi_Pandey_Resume.pdf"
+							className="opacity-60 hover:opacity-100 transition-opacity"
+						>
+							Resume
 						</a>
 					</div>
 				</div>
