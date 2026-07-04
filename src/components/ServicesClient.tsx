@@ -10,6 +10,7 @@ import {
 	Sparkles,
 } from "lucide-react";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
 const ServicesClient = () => {
 	const services = [
@@ -90,6 +91,51 @@ const ServicesClient = () => {
 			title: "Deploy & Scale",
 			description:
 				"Launching with performance audits, cloud configuration, caching strategies, and ongoing optimization support.",
+		},
+	];
+
+	const testimonials = [
+		{
+			quote:
+				"Ravi scaled our local delivery service platform backend to handle thousands of active requests smoothly. The API design and real-time updates were perfectly executed.",
+			author: "Amit Sharma",
+			role: "Founder, Sahayakji",
+			project: "Sahayakji App",
+		},
+		{
+			quote:
+				"Working with Ravi on our inventory SaaS was incredible. His expertise in Node.js and MongoDB helped us deploy our MVP in record time with absolute stability.",
+			author: "Priya Patel",
+			role: "Co-Founder, Pharmly",
+			project: "Pharmly Healthcare",
+		},
+		{
+			quote:
+				"Ravi integrated predictive vehicle analytics seamlessly. His work in PostgreSQL and data visualization has allowed our users to monitor real-time maintenance effortlessly.",
+			author: "Rohan Deshmukh",
+			role: "Product Owner, VehicleCare",
+			project: "VehicleCare Systems",
+		},
+		{
+			quote:
+				"The Next.js frontend built by Ravi is super fast, incredibly responsive, and has beautiful editorial aesthetics. Our client engagement surged right after deployment.",
+			author: "Sneha Iyer",
+			role: "Design Lead, Veda Studios",
+			project: "Agency Portfolio",
+		},
+		{
+			quote:
+				"Ravi's full-stack expertise helped us ship our AI-powered product demo to investors within two weeks. A highly professional, detail-oriented SDE.",
+			author: "Aarav Joshi",
+			role: "CTO, Vyapaar.ai",
+			project: "Vyapaar AI Platform",
+		},
+		{
+			quote:
+				"The offline-first native functionalities Ravi built in Kotlin for our delivery team are rock solid. Excellent communication and prompt deliveries.",
+			author: "Ananya Reddy",
+			role: "Operations Head, QuickCart",
+			project: "Logistics App",
 		},
 	];
 
@@ -207,7 +253,97 @@ const ServicesClient = () => {
 				</div>
 			</div>
 
-			{/* 4. Large CTA Section */}
+			{/* 4. Delivered Impact & Testimonials */}
+			<div className="mb-32">
+				<div className="border-b border-black/10 pb-8 mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+					<div>
+						<p className="font-mono text-[9px] tracking-[0.3em] uppercase text-[#8C8680] mb-2">
+							Delivered Impact
+						</p>
+						<h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
+							Client Feedback & Stats
+						</h2>
+					</div>
+					<div className="flex flex-wrap gap-8 border-l border-black/10 pl-6 h-auto md:h-12 items-center">
+						<div>
+							<p className="text-2xl md:text-3xl font-bold tracking-tight">
+								10+
+							</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8680]">
+								Projects Shipped
+							</p>
+						</div>
+						<div>
+							<p className="text-2xl md:text-3xl font-bold tracking-tight">
+								100%
+							</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8680]">
+								Success Rate
+							</p>
+						</div>
+						<div>
+							<p className="text-2xl md:text-3xl font-bold tracking-tight">
+								1+
+							</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8680]">
+								Years Experience
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className="w-full overflow-hidden">
+					<Marquee
+						direction="right"
+						speed={35}
+						gradient={false}
+						pauseOnHover={true}
+						className="py-4"
+					>
+						{testimonials.map((t) => (
+							<div
+								key={t.author}
+								className="bg-[#F5F2EE] border border-black/10 p-6 sm:p-8 rounded-lg flex flex-col justify-between transition-all duration-300 hover:border-black/30 hover:shadow-[0_4px_30px_rgba(0,0,0,0.01)] h-[280px] w-[320px] sm:w-[380px] shrink-0 mx-4"
+							>
+								<div className="space-y-6">
+									<div className="flex items-center gap-1">
+										{[...Array(5)].map((_, i) => (
+											<svg
+												key={`${t.author}-star-${i}`}
+												className="w-3.5 h-3.5 fill-current text-amber-600"
+												viewBox="0 0 24 24"
+												role="img"
+												aria-label="Star Rating"
+											>
+												<title>Star</title>
+												<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+											</svg>
+										))}
+									</div>
+									<p className="text-sm text-[#4a4a4a] leading-relaxed font-light italic be-vietnam min-h-[90px]">
+										&ldquo;{t.quote}&rdquo;
+									</p>
+								</div>
+								<div className="border-t border-black/5 pt-6 mt-8 flex justify-between items-end">
+									<div>
+										<h4 className="text-sm font-bold tracking-tight">
+											{t.author}
+										</h4>
+										<p className="text-[10px] text-[#8C8680] font-mono uppercase tracking-wider mt-0.5">
+											{t.role}
+										</p>
+									</div>
+									<span className="text-[9px] font-mono border border-black/10 px-2 py-0.5 uppercase tracking-tighter text-[#8C8680] bg-white/40">
+										{t.project}
+									</span>
+								</div>
+							</div>
+						))}
+					</Marquee>
+				</div>
+			</div>
+
+			{/* 5. Large CTA Section */}
 			<motion.div
 				initial={{ opacity: 0, y: 40 }}
 				whileInView={{ opacity: 1, y: 0 }}
