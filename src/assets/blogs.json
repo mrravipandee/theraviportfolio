@@ -1,0 +1,32 @@
+[
+	{
+		"slug": "scaling-backend-architectures-go",
+		"title": "The Art of Scalable Backend Architectures with Go",
+		"description": "Explore patterns for managing high concurrency, robust database connection pools, and clean gRPC layers in modern web service APIs.",
+		"date": "2026-05-12",
+		"readingTime": "5 min read",
+		"category": "Backend",
+		"content": "<p>Designing software systems that scale effortlessly requires a deep alignment between language capabilities and network design. Go (Golang) has emerged as the premier runtime choice for microservices due to its native goroutines and minimal overhead. However, writing code that compiles is very different from writing architectures that scale. In this article, we deep dive into connection pool management, concurrent request dispatching, and structuring structured gRPC APIs that minimize latency.</p><h2>The Power of Goroutines</h2><p>Go leverages a lightweight thread management system called goroutines. Unlike operating system threads, which carry a stack size of 1-2 megabytes, a goroutine starts with only 2 kilobytes of stack space. This stack grows and shrinks dynamically as needed, allowing Go programs to concurrently execute hundreds of thousands of concurrent routines without resource exhaustion.</p><blockquote>“Go is not a language of features, but a language of composable patterns.”</blockquote><h2>Managing Database Connections Safely</h2><p>When scale increases, databases are usually the first bottleneck. Setting up proper pool controls prevents running out of socket descriptors. Here is a standard configuration mapping in Go:</p><pre><code>db, err := sql.Open(\"postgres\", connStr)\nif err != nil {\n    log.Fatal(err)\n}\n// Set connection pool limits\ndb.SetMaxOpenConns(25)\ndb.SetMaxIdleConns(25)\ndb.SetConnMaxLifetime(5 * time.Minute)</code></pre><h3>Key Database Pool Best Practices:</h3><ul><li><strong>Match Open and Idle limits:</strong> This prevents the continuous setup and tear down of TCP handshakes.</li><li><strong>Set max lifetime:</strong> Avoid keeping staled sockets open indefinitely.</li><li><strong>Handle contexts:</strong> Always pass <code>context.WithTimeout</code> to query operations.</li></ul><h2>Conclusion</h2><p>By coupling Go's lightweight runtime with strict limits on external connections, developers can scale platforms to millions of operations per second with minimal cloud compute expenses.</p>",
+		"author": "Ravi Pandey"
+	},
+	{
+		"slug": "react-optimization-secrets-nextjs",
+		"title": "Next-Gen React: Optimization Secrets for Next.js Apps",
+		"description": "How to leverage server actions, partial pre-rendering (PPR), and CSS container queries for sub-100ms LCP core web vitals.",
+		"date": "2026-06-02",
+		"readingTime": "6 min read",
+		"category": "Frontend",
+		"content": "<p>Core Web Vitals are no longer just performance guidelines—they are search engine ranking determinants. In Next.js, optimizing for the Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS) demands a meticulous understanding of server versus client components.</p><h2>Understanding Partial Prerendering (PPR)</h2><p>Partial Prerendering (PPR) allows you to combine static and dynamic rendering in the same route. Next.js instantly serves a static shell of the page while streaming dynamic segments in the background, significantly reducing Time to First Byte (TTFB).</p><blockquote>“The fastest request is the one that is already cached.”</blockquote><h2>Optimizing Main Thread Assets</h2><p>Inline animations and heavy libraries can clog the main UI thread. Here is how you can load modules dynamically in Next.js:</p><pre><code>import dynamic from 'next/dynamic';\n\nconst ComplexChart = dynamic(() => import('@/components/ComplexChart'), {\n  loading: () => &lt;p&gt;Loading Chart...&lt;/p&gt;,\n  ssr: false,\n});</code></pre><h2>Best Practices for Image and Layout Shifts</h2><ol><li><strong>Always specify dimensions:</strong> Use explicit width and height properties on <code>next/image</code> components to avoid CLS.</li><li><strong>Prioritize above-the-fold assets:</strong> Mark hero banners with <code>priority={true}</code>.</li><li><strong>Leverage Tailwind container queries:</strong> Style components dynamically based on parent container width for clean modular layouts.</li></ol>",
+		"author": "Ravi Pandey"
+	},
+	{
+		"slug": "startups-ai-local-nlp-integration",
+		"title": "Startups & AI: Integrating Local NLP Models Safely",
+		"description": "A guide to cost-effective embedding generation, semantic searching, and integrating PyTorch pipelines into SaaS applications.",
+		"date": "2026-06-25",
+		"readingTime": "8 min read",
+		"category": "Machine Learning",
+		"content": "<p>Startups looking to introduce intelligence into their applications are often deterred by high API subscription charges and data privacy risks. Running local open-weight natural language processing (NLP) models presents a viable alternative.</p><h2>The Value of Local Embeddings</h2><p>Generating vector embeddings locally allows for semantic searching, recommendation layers, and document parsing without transferring user data to third-party endpoints. This guarantees data privacy compliance (such as GDPR or HIPAA) out of the box.</p><h2>Semantic Search Setup using pgvector</h2><p>Using PostgreSQL with the <code>pgvector</code> extension is one of the most efficient ways to search similar documents inside a MERN or Relational stack. Here is a typical SQL lookup setup:</p><pre><code>-- Select documents with highest cosine similarity\nSELECT id, content, 1 - (embedding &lt;=&gt; $1) AS similarity\nFROM documents\nWHERE 1 - (embedding &lt;=&gt; $1) &gt; 0.75\nORDER BY similarity DESC\nLIMIT 5;</code></pre><h2>Cost Comparison: API vs Local Compute</h2><ul><li><strong>Third-party API Cost:</strong> Up to $0.02 per 1K tokens. Can scale to thousands of dollars a month for large datasets.</li><li><strong>Local Compute Cost:</strong> Stably bound to hosting cost (e.g., standard virtual machine with shared CPU), costing under $40 a month.</li></ul><blockquote>“Local models democratize AI integration by turning variable network overhead into fixed, predictable infrastructure costs.”</blockquote>",
+		"author": "Ravi Pandey"
+	}
+]
