@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Work = () => {
+	const reversedProjects = [...projects].reverse();
 	return (
 		// 1. Changed mt-32 to pt-48 to give the Navbar ample breathing room
 		// 2. Used bg-[#F5F2EE] to match your overall theme
@@ -22,7 +23,7 @@ const Work = () => {
 
 			{/* Vertical Catalog Layout */}
 			<div className="flex flex-col gap-40">
-				{projects.map((project, index) => (
+				{reversedProjects.map((project, index) => (
 					<div
 						key={project.id || index}
 						className="group flex flex-col md:flex-row gap-12 md:gap-24 items-start"
@@ -31,7 +32,7 @@ const Work = () => {
 						<div className="w-full md:w-1/3 space-y-8 order-2 md:order-1">
 							<div className="flex justify-between items-baseline border-b border-black/10 pb-4">
 								<span className="font-mono text-[11px] text-[#8C8680]">
-									{project.id || `0${index + 1}`}
+									{`0${index + 1}`}
 								</span>
 								<span className="font-mono text-[10px] tracking-widest text-[#8C8680] uppercase">
 									{project.scope || "Development"}
@@ -55,9 +56,9 @@ const Work = () => {
 
 							{project.technologies && (
 								<div className="flex flex-wrap gap-2 pt-4">
-									{project.technologies.map((tech, i) => (
+									{project.technologies.map((tech) => (
 										<span
-											key={i}
+											key={tech}
 											className="text-[10px] font-mono border border-black/10 px-2 py-1 uppercase tracking-tighter text-[#8C8680]"
 										>
 											{tech}

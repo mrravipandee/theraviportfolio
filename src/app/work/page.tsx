@@ -13,13 +13,15 @@ export const metadata: Metadata = {
 };
 
 const Work = () => {
+	const reversedProjects = [...projects].reverse();
+
 	const projectListSchema = {
 		"@context": "https://schema.org",
 		"@type": "ItemList",
 		name: "Ravi Pandey's Portfolio Projects",
 		description:
 			"A showcase of software engineering projects built by Ravi Pandey.",
-		itemListElement: projects.map((project, index) => ({
+		itemListElement: reversedProjects.map((project, index) => ({
 			"@type": "ListItem",
 			position: index + 1,
 			item: {
@@ -53,7 +55,7 @@ const Work = () => {
 
 				{/* Vertical Catalog Layout */}
 				<div className="flex flex-col gap-24">
-					{projects.map((project, index) => (
+					{reversedProjects.map((project, index) => (
 						<div
 							key={project.id}
 							className="group flex flex-col md:flex-row gap-10 md:gap-20 items-start"

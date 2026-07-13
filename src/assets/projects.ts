@@ -1,8 +1,10 @@
+import baniyas from "./baniyas.png";
+import chatcv from "./chatcv.png";
 import pharmly from "./pharmly.png";
 import sahayakji from "./sahayakji.png";
 import vahiclecare from "./vehiclecare.png";
 
-export { pharmly, sahayakji, vahiclecare };
+export { pharmly, sahayakji, vahiclecare, chatcv, baniyas };
 
 export const projects = [
 	{
@@ -57,6 +59,52 @@ export const projects = [
 			"PostgreSQL",
 			"Predictive Logic",
 			"Data Visualization",
+		],
+	},
+	{
+		id: "04",
+		title: "ChatCV",
+		scope: "AI + SaaS",
+		tagline: "Conversational Resume Builder",
+		description:
+			"A ChatGPT-style resume builder where users generate complete ATS-friendly resumes through natural AI conversations. Features a real-time resume preview engine using React, TypeScript, and WebSockets, plus an automated LaTeX PDF generation pipeline with raw .tex downloads and secure subscription billing.",
+		image: chatcv,
+		sourceLink: "https://github.com/mrravipandee/chatcv",
+		liveLink: "https://resumebuilder-chatcv.vercel.app/",
+		technologies: [
+			"Next.js 15",
+			"React",
+			"TypeScript",
+			"TailwindCSS",
+			"Node.js",
+			"Express",
+			"MongoDB",
+			"Docker",
+			"Gemini",
+			"WebSockets",
+			"DODO Payment",
+		],
+	},
+	{
+		id: "05",
+		title: "Baniya's App",
+		scope: "AI + Retail",
+		tagline: "Smart Store Ledger",
+		description:
+			"A multi-tenant inventory management SaaS platform for Kirana stores with complete tenant isolation. Features an AI-powered Hinglish voice assistant using Google Gemini to query product details, combined with Razorpay subscriptions, secure REST APIs, RBAC, and responsive shop-owner dashboards.",
+		image: baniyas,
+		sourceLink: "https://github.com/mrravipandee/baniyas-app",
+		liveLink: "https://baniyas.store/",
+		technologies: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Android",
+			"Kotlin",
+			"NestJS",
+			"MongoDB",
+			"Gemini",
+			"Razorpay",
 		],
 	},
 ];
