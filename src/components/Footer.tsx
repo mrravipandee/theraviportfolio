@@ -36,15 +36,15 @@ const footerLinks: footerLinkType[] = [
 const Footer = () => {
 	return (
 		<footer className="view-container border-t border-black/5 pt-10 pb-20 px-6 md:px-10">
-			<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+			<div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-10">
 				{/* Brand & Credits */}
-				<div className="space-y-4">
+				<div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
 					<p className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#8C8680]">
 						Crafted with rigor by Ravii Pandey
 					</p>
 					<Link
 						href="/work"
-						className="group flex gap-2 items-center text-sm font-semibold tracking-tight"
+						className="group flex gap-2 items-center justify-center md:justify-start text-sm font-semibold tracking-tight"
 					>
 						Explore Recent Work
 						<ArrowUpRight
@@ -55,12 +55,12 @@ const Footer = () => {
 				</div>
 
 				{/* Social Links - Clean Grid */}
-				<div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4">
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 justify-items-center md:justify-items-start">
 					{footerLinks.map((link) => (
 						<Link
 							key={link.href}
 							href={link.href}
-							className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[#8C8680] hover:text-black transition-colors"
+							className="flex items-center justify-center md:justify-start gap-2 text-[11px] font-bold uppercase tracking-widest text-[#8C8680] hover:text-black transition-colors"
 							rel="noopener noreferrer"
 							target="_blank"
 						>

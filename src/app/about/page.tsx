@@ -42,8 +42,8 @@ const About = () => {
 			<section className="view-container pt-28 pb-20 md:py-40 bg-[#F5F2EE] px-6 md:px-10">
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
 					{/* 1. Left Column: Image/Visual (Editorial Style) */}
-					<div className="col-span-12 md:col-span-5 group relative">
-						<div className="relative aspect-[1.2] md:aspect-[4/5] overflow-hidden bg-[#E6E2DD]">
+					<div className="md:col-span-5 group relative">
+						<div className="relative aspect-[4/5] overflow-hidden bg-[#E6E2DD]">
 							<Image
 								src="/founder-ravi-pandey.png"
 								alt="Ravii Pandey Profile"
@@ -62,7 +62,7 @@ const About = () => {
 					</div>
 
 					{/* 2. Right Column: Text/Content */}
-					<div className="col-span-12 md:col-span-7 md:pl-12">
+					<div className="md:col-span-7 md:pl-12">
 						<p className="font-mono text-[10px] tracking-[0.3em] uppercase text-[#8C8680] mb-6">
 							Introduction — Vol. 01
 						</p>
