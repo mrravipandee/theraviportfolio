@@ -75,7 +75,13 @@ const Footer = () => {
 			<div className="mt-20 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-black/5 pt-8">
 				<div className="flex gap-8 font-mono text-[9px] tracking-[0.2em] text-[#8C8680] uppercase">
 					<p>© raviverse.</p>
-					<p>Open Source</p>
+					<Link
+						href="https://github.com/mrravipandee"
+						target="_blank"
+						className="border-b border-black/20 pb-1 hover:border-black transition-all"
+					>
+						Open Source
+					</Link>
 				</div>
 
 				<div className="font-mono text-[9px] tracking-[0.2em] text-[#8C8680] uppercase">

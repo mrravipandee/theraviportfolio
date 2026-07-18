@@ -67,23 +67,20 @@ const About = () => {
 							Introduction — Vol. 01
 						</p>
 
-						<h2 className="text-4xl md:text-7xl font-medium tracking-tighter leading-none mb-10">
-							I build for the <br />
-							<span className="italic">next generation.</span>
+						<h2 className="text-3xl md:text-6xl font-medium leading-none mb-10">
+							I build products that people remember.<br />
+							<span className="italic md:text-6xl text-3xl">Not just websites.</span>
 						</h2>
 
 						<div className="space-y-6 max-w-xl">
 							<p className="text-lg md:text-xl text-[#1A1A1A] font-medium leading-tight be-vietnam">
-								I&apos;m Ravii Pandey, a Full-Stack Developer and Machine
-								Learning enthusiast based in Nashik, India.
+								I&apos;m Ravii Pandey — a Full-Stack Developer who enjoys turning messy ideas into products that solve real problems.
 							</p>
 
 							<p className="text-sm md:text-base text-[#4a4a4a] leading-relaxed font-light be-vietnam">
-								I thrive on helping startups scale by simplifying complex
-								technology. Whether it&apos;s crafting seamless web experiences
-								with React and Node.js or unlocking AI possibilities with NLP,
-								I’m committed to building tools that transform ideas into
-								scalable digital realities.
+								I don't just write code. I obsess over the little details that make software feel fast, intuitive, and enjoyable to use. From developer tools and AI-powered applications to SaaS products, I'm always chasing one goal:
+								<span className="block text-lg md:text-xl text-[#1A1A1A] font-medium leading-tight">Build something people genuinely come back to.</span>
+								Currently based in Nashik, India, I'm constantly exploring new technologies, contributing to open source, and shipping projects that challenge me to become a better engineer every single day.
 							</p>
 						</div>
 
@@ -98,10 +95,10 @@ const About = () => {
 
 							<Link
 								target="_blank"
-								href="https://bento.me/mrravipandee"
+								href="https://raviverse.dev/contact"
 								className="text-[11px] font-bold uppercase tracking-widest border-b border-black pb-1 hover:opacity-50 transition-all"
 							>
-								Connect on Bento
+								Let's Connect!
 							</Link>
 						</div>
 					</div>
